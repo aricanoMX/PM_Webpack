@@ -56,3 +56,14 @@
 // node utiliza por dentro un sistema de modulos llamado commond js
 
 // __dirname es una variable que se coloca depende el lugar o la direccion en donde nos encontramos
+
+//_______________________________________}
+// Manejo de assets con Loaders
+// Los Loaders son la funcionalidad que nos da Webpack para interpretar tipos de archivos no soportados de forma nativa por Javascript.
+// style-loader sirve para inyectar un tag style (el CSS) al DOM de nuestro HTML, mientras que css-loader sólo sirve para interpretar archivos CSS.
+
+// style-loader sirve para interpretar codigo en este caso de css
+// css-loader sirve para insertar codigo css en nuestro package
+//_________________________________________________________
+// Introducción al uso de plugins
+// Los Plugins sirven para extender las capacidades de webpack y dar más poder a los loaders.
