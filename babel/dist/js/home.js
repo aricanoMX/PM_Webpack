@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "02b3a87e4da2835b1c96";
+/******/ 	var hotCurrentHash = "16af6028d5311ec1d1ae";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -878,19 +878,31 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/index.css */ \"./babel/src/css/index.css\");\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _text_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./text.js */ \"./babel/src/js/text.js\");\n\r\n\r\n\r\nObject(_text_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\nif (true) {\r\n  module.hot.accept(/*! ./text.js */ \"./babel/src/js/text.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _text_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./text.js */ \"./babel/src/js/text.js\");\n(function () {\r\n    console.log(\"se recargo el archivo\");\r\n    Object(_text_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n  })(__WEBPACK_OUTDATED_DEPENDENCIES__); }.bind(this));\r\n}\r\n\n\n//# sourceURL=webpack:///./babel/src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/index.css */ \"./babel/src/css/index.css\");\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./search */ \"./babel/src/js/search.js\");\n/* harmony import */ var _render__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./render */ \"./babel/src/js/render.js\");\n\r\n\r\n\r\n\r\nconst id = prompt(\"Quien es ese pokemon? \");\r\nObject(_search__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(id)\r\n  .then((data) => {\r\n    Object(_render__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(data);\r\n  })\r\n  .catch(() => {\r\n    console.log(\"no hubo pokemon\");\r\n  });\r\n\r\n// import text from \"./text.js\";\r\n// text();\r\n// if (module.hot) {\r\n//   module.hot.accept(\"./text.js\", function () {\r\n//     console.log(\"se recargo el archivo\");\r\n//     text();\r\n//   });\r\n// }\r\n\n\n//# sourceURL=webpack:///./babel/src/js/index.js?");
 
 /***/ }),
 
-/***/ "./babel/src/js/text.js":
-/*!******************************!*\
-  !*** ./babel/src/js/text.js ***!
-  \******************************/
+/***/ "./babel/src/js/render.js":
+/*!********************************!*\
+  !*** ./babel/src/js/render.js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction text() {\r\n  document.body.innerHTML = \"<p> Hola Hommies por 10 segundos</p>\";\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (text);\r\n\n\n//# sourceURL=webpack:///./babel/src/js/text.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction render(data) {\r\n  const pokemon = document.createElement(\"img\");\r\n  pokemon.setAttribute(\"src\", data.sprites.fron_default);\r\n  document.body.append(pokemon);\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (render);\r\n\n\n//# sourceURL=webpack:///./babel/src/js/render.js?");
+
+/***/ }),
+
+/***/ "./babel/src/js/search.js":
+/*!********************************!*\
+  !*** ./babel/src/js/search.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nasync function search(id) {\r\n  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);\r\n  const pokemon = await response.json();\r\n  return pokemon;\r\n}\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (search);\r\n\n\n//# sourceURL=webpack:///./babel/src/js/search.js?");
 
 /***/ }),
 

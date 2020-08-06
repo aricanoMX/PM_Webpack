@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded"),
+    url("../fonts/OpenSans-Regular-webfont.woff") format("woff"),
+    url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 99vh;
+  background: lightskyblue;
+
+  font-size: 40px;
+  font-family: "open_sansregular";
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px black;
+  /* animation: 6s latido infinite; */
+}
+
+/* @keyframes latido {
+  0% {
+    transform: scale(1.1);
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2);
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: scale(1.3);
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: scale(1.2);
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: scale(1.1);
+    transform: rotate(360deg);
+  }
+} */
